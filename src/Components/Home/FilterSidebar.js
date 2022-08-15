@@ -47,7 +47,9 @@ const FilterSidebar = () => {
                 <div className="mb-5 form-control shadow-lg shadow-gray-100 rounded-xl border border-[#fbf9f9] w-full">
                     <div className="border-b px-5 py-4">
                         <p className="text-gray-400">Guests</p>
-                        <h4 className="font-bold text-base uppercase">2 Adults, 1 Child</h4>
+                        <h4 className="font-bold text-base uppercase">
+                            {adult > 0 && `${adult}  Adults,`} {child > 0 && `${child} Child,`} {babies > 0 && `${babies} Babies`}
+                        </h4>
                     </div>
 
                     <div className="px-5">
