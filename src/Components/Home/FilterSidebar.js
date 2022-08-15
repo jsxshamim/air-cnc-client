@@ -1,10 +1,14 @@
 import { faMinus, faPlus, faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
+import React, { useState } from "react";
 import "react-day-picker/dist/style.css";
 import { useForm } from "react-hook-form";
 
 const FilterSidebar = () => {
+    const [adult, setAdult] = useState(0);
+    const [child, setChild] = useState(0);
+    const [babies, setBabies] = useState(0);
+
     const {
         register,
         handleSubmit,
@@ -12,7 +16,7 @@ const FilterSidebar = () => {
         formState: { errors },
     } = useForm();
 
-    const onSubmit = (data) => console.log(data);
+    const onSubmit = (data) => {};
 
     return (
         <div>
@@ -50,12 +54,16 @@ const FilterSidebar = () => {
                         <div className="flex justify-between py-3 pt-5">
                             <div>
                                 <h4 className="text-base font-bold uppercase">Adults</h4>
-                                <span className="text-sm text-gray-300">Age 2-12</span>
+                                <span className="text-sm text-gray-300">Greater then 12</span>
                             </div>
                             <div>
-                                <FontAwesomeIcon icon={faMinus} />
-                                <input defaultValue={0} className="font-bold text-lg w-14 focus:outline-none text-center" type="text" />
-                                <FontAwesomeIcon icon={faPlus} />
+                                <button className="disabled:text-gray-300" disabled={adult < 1 && "disabled"} onClick={() => setAdult(adult - 1)}>
+                                    <FontAwesomeIcon icon={faMinus} />
+                                </button>
+                                <input value={adult} className="font-bold text-lg w-14 focus:outline-none text-center" type="text" />
+                                <button className="disabled:text-gray-300" disabled={adult >= 5 && "disabled"} onClick={() => setAdult(adult + 1)}>
+                                    <FontAwesomeIcon icon={faPlus} />
+                                </button>
                             </div>
                         </div>
                         <div className="flex justify-between py-3">
@@ -64,9 +72,13 @@ const FilterSidebar = () => {
                                 <span className="text-sm text-gray-300">Age 2-12</span>
                             </div>
                             <div>
-                                <FontAwesomeIcon icon={faMinus} />
-                                <input defaultValue={0} className="font-bold text-lg w-14 focus:outline-none text-center" type="text" />
-                                <FontAwesomeIcon icon={faPlus} />
+                                <button className="disabled:text-gray-300" disabled={child < 1 && "disabled"} onClick={() => setChild(child - 1)}>
+                                    <FontAwesomeIcon icon={faMinus} />
+                                </button>
+                                <input value={child} className="font-bold text-lg w-14 focus:outline-none text-center" type="text" />
+                                <button className="disabled:text-gray-300" disabled={child >= 5 && "disabled"} onClick={() => setChild(child + 1)}>
+                                    <FontAwesomeIcon icon={faPlus} />
+                                </button>
                             </div>
                         </div>
                         <div className="flex justify-between py-3">
@@ -75,9 +87,13 @@ const FilterSidebar = () => {
                                 <span className="text-sm text-gray-300">Younger then 2</span>
                             </div>
                             <div>
-                                <FontAwesomeIcon icon={faMinus} />
-                                <input defaultValue={0} className="font-bold text-lg w-14 focus:outline-none text-center" type="text" />
-                                <FontAwesomeIcon icon={faPlus} />
+                                <button className="disabled:text-gray-300" disabled={babies < 1 && "disabled"} onClick={() => setBabies(babies - 1)}>
+                                    <FontAwesomeIcon icon={faMinus} />
+                                </button>
+                                <input value={babies} className="font-bold text-lg w-14 focus:outline-none text-center" type="text" />
+                                <button className="disabled:text-gray-300" disabled={babies >= 5 && "disabled"} onClick={() => setBabies(babies + 1)}>
+                                    <FontAwesomeIcon icon={faPlus} />
+                                </button>
                             </div>
                         </div>
                     </div>
