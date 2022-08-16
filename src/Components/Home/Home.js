@@ -13,7 +13,7 @@ const Home = () => {
                     </div>
 
                     <div className="border col-span-8">
-                        <Services />
+                        <ServicesCard />
 
                     </div>
                 </div>
