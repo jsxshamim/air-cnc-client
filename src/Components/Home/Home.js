@@ -1,6 +1,7 @@
 import React from "react";
 import FilterSidebar from "./FilterSidebar";
-import Services from "./Services";
+import ServicesCard from "./ServicesCard";
+
 
 const Home = () => {
     return (
@@ -11,7 +12,7 @@ const Home = () => {
                         <FilterSidebar />
                     </div>
                     <div className="border col-span-9">
-                        <Services />
+                        <ServicesCard />
                     </div>
                 </div>
             </div>
