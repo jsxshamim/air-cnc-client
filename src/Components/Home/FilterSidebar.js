@@ -29,17 +29,17 @@ const FilterSidebar = () => {
                     </label>
                 </div>
 
-                <div className="flex gap-3 mb-5">
-                    <div class="form-control shadow-lg shadow-gray-100 py-4 px-5 rounded-xl border border-[#fbf9f9] w-full">
+                <div className="lg:flex gap-3 mb-5 ">
+                    <div class=" form-control shadow-lg shadow-gray-100 py-4 px-5 rounded-xl border border-[#fbf9f9] w-full">
                         <label>
                             <p className="uppercase font-bold">Arrival</p>
-                            <input className="focus:outline-none" type="date" name="arrival" id="arrival" />
+                            <input className="w-full focus:outline-none" type="date" name="arrival" id="arrival" />
                         </label>
                     </div>
-                    <div class="form-control shadow-lg shadow-gray-100 py-4 px-5 rounded-xl border border-[#fbf9f9] w-full">
+                    <div class=" form-control shadow-lg shadow-gray-100 py-4 px-5 rounded-xl border border-[#fbf9f9] w-full">
                         <label>
                             <p className="uppercase font-bold">Departure</p>
-                            <input className="focus:outline-none" type="date" name="departure" id="departure" />
+                            <input className="w-full focus:outline-none" type="date" name="departure" id="departure" />
                         </label>
                     </div>
                 </div>
