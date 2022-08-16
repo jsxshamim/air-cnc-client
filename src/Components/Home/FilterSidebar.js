@@ -20,7 +20,6 @@ const FilterSidebar = () => {
 
     return (
         <div>
-            <h2 className="font-bold text-xl mb-10">Where do you want to go</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div class="form-control mb-5 shadow-lg shadow-gray-100 py-4 px-5 rounded-xl border border-[#fbf9f9]">
                     <label>
@@ -29,14 +28,14 @@ const FilterSidebar = () => {
                     </label>
                 </div>
 
-                <div className="lg:flex gap-3 mb-5 ">
-                    <div class=" form-control shadow-lg shadow-gray-100 py-4 px-5 rounded-xl border border-[#fbf9f9] w-full">
+                <div className="xl:flex gap-3">
+                    <div class="mb-5 form-control shadow-lg shadow-gray-100 py-4 px-5 rounded-xl border border-[#fbf9f9] w-full">
                         <label>
                             <p className="uppercase font-bold">Arrival</p>
                             <input className="w-full focus:outline-none" type="date" name="arrival" id="arrival" />
                         </label>
                     </div>
-                    <div class=" form-control shadow-lg shadow-gray-100 py-4 px-5 rounded-xl border border-[#fbf9f9] w-full">
+                    <div class="mb-5 form-control shadow-lg shadow-gray-100 py-4 px-5 rounded-xl border border-[#fbf9f9] w-full">
                         <label>
                             <p className="uppercase font-bold">Departure</p>
                             <input className="w-full focus:outline-none" type="date" name="departure" id="departure" />
