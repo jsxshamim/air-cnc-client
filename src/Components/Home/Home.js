@@ -1,6 +1,7 @@
 import React from "react";
 import FilterSidebar from "./FilterSidebar";
-import Services from "./Services";
+import ServicesCard from "./ServicesCard";
+
 
 const Home = () => {
     return (
@@ -10,8 +11,10 @@ const Home = () => {
                     <div className="col-span-4">
                         <FilterSidebar />
                     </div>
+
                     <div className="border col-span-8">
                         <Services />
+
                     </div>
                 </div>
             </div>
