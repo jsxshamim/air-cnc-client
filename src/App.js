@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import Home from "./Components/Home/Home";
+import SafePeacefulDetail from "./Components/SafePeacefulDetail/SafePeacefulDetail";
 import Header from "./Components/Shared/Header";
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
                 <Route path="/" element={<Home />} />
             </Routes>
             {/* <Footer /> */}
+            <SafePeacefulDetail></SafePeacefulDetail>
         </>
     );
 }
