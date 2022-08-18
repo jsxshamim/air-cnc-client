@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick.css";
 import Service from "./Service";
 import "./style.css";
 
-const Services = ({ services, children, itemToShow }) => {
+const Services = ({ services, children, itemToShow, maxHight }) => {
     // slider
     const settings = {
         slidesToShow: itemToShow,
@@ -32,7 +32,7 @@ const Services = ({ services, children, itemToShow }) => {
                 },
             },
             {
-                breakpoint: 520,
+                breakpoint: 642,
                 settings: {
                     slidesToShow: 1,
                 },
