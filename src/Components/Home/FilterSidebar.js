@@ -19,7 +19,7 @@ const FilterSidebar = () => {
     const onSubmit = (data) => {};
 
     return (
-        <div>
+        <aside>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div class="form-control mb-5 shadow-lg shadow-gray-100 py-4 px-5 rounded-xl border border-[#fbf9f9]">
                     <label>
@@ -103,7 +103,7 @@ const FilterSidebar = () => {
                     <FontAwesomeIcon className="mr-2" icon={faSearch} /> Search
                 </button>
             </form>
-        </div>
+        </aside>
     );
 };
 

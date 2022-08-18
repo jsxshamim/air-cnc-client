@@ -5,27 +5,34 @@ import "slick-carousel/slick/slick.css";
 import Service from "./Service";
 import "./style.css";
 
-const Services = ({ services, children }) => {
+const Services = ({ services, children, itemToShow }) => {
     // slider
     const settings = {
-        slidesToShow: 4,
+        slidesToShow: itemToShow,
         swipeToSlide: true,
         arrows: false,
         responsive: [
             {
-                breakpoint: 1025,
+                breakpoint: 1280,
                 settings: {
                     slidesToShow: 3,
+                },
+            },
+            {
+                breakpoint: 1025,
+                settings: {
+                    slidesToShow: 2,
                 },
             },
             {
                 breakpoint: 769,
                 settings: {
                     slidesToShow: 2,
+                    arrows: true,
                 },
             },
             {
-                breakpoint: 480,
+                breakpoint: 520,
                 settings: {
                     slidesToShow: 1,
                 },
@@ -46,7 +53,7 @@ const Services = ({ services, children }) => {
             <div>
                 <Slider {...settings}>
                     {services.map((service) => (
-                        <Service key={service.id} service={service}></Service>
+                        <Service key={service.id} itemToShow={itemToShow} service={service}></Service>
                     ))}
                 </Slider>
             </div>

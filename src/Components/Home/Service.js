@@ -1,13 +1,13 @@
 import React from "react";
 import "./style.css";
 
-const Service = ({ service }) => {
+const Service = ({ service, itemToShow }) => {
     const { title, img, price, rating, address, placeType } = service;
 
     return (
         <div className="mr-4">
-            <figure>
-                <img className="w-full xl:h-[130px] lg:h-[170px] h-[270px] object-cover" src={img} alt="Shoes" />
+            <figure className="">
+                <img className={`w-full ${itemToShow === 3 && "xl:h-[180px]"} xl:h-[130px] lg:h-[170px] md:h-[170px] h-[270px] object-cover`} src={img} alt="Shoes" />
             </figure>
             <div>
                 <h2 class="text-xs uppercase text-secondary font-bold my-1">

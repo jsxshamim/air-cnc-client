@@ -146,8 +146,12 @@ const ServicesCard = () => {
 
     return (
         <div>
-            <Services services={experienceCollection}>Experience</Services>
-            <Services services={homeCollection}>Homes</Services>
+            <Services itemToShow={4} services={experienceCollection}>
+                Experience
+            </Services>
+            <Services itemToShow={3} services={homeCollection}>
+                Homes
+            </Services>
         </div>
     );
 };
