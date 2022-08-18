@@ -90,10 +90,6 @@ const SearchResult = () => {
                                         <img className="w-full rounded-2xl h-full object-cover" src={img} alt="" />
                                     </div>
 
-                                    <div className="w-5/12">
-                                        <img className="w-full rounded-2xl h-full object-cover" src={img} alt="" />
-                                    </div>
-
                                     <div className="w-7/12">
                                         <h2 className="text-xl font-bold">{title}</h2>
                                         <p className="my-3">{`${guests} guests ${bedroom} bedroom ${beds} beds ${baths} baths`}</p>
