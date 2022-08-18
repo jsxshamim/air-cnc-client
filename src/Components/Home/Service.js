@@ -6,7 +6,6 @@ const Service = ({ service, itemToShow }) => {
 
     return (
         <div className="mr-4">
-
             <div>
                 <img className={`w-full object-cover ${itemToShow === 4 ? "xl:h-[130px] lg:h-[150px] md:h-[150px] sm:h-[200px] h-[240px]" : "xl:h-[180px] lg:h-[150px] md:h-[150px] sm:h-[200px] h-[240px]"}`} src={img} alt="" />
             </div>

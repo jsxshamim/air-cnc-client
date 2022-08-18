@@ -70,7 +70,6 @@ const services = [
 const SearchResult = () => {
     return (
         <div>
-
             <div className="w-[90%] mx-auto p-2 lg:grid grid-cols-2 gap-10">
                 <div>
                     <p className="text-neutral">252 stays Apr 13-17, 3 guests</p>
@@ -87,7 +86,6 @@ const SearchResult = () => {
                             const { wifi, airCondition, kitchen, guests, bedroom, baths, beds, cancelationFlexibility, price, rating, reviews, img, title } = service;
                             return (
                                 <div className="service flex gap-8 my-8 border-b-2 pb-8 last:border-b-0">
-
                                     <div className="w-5/12">
                                         <img className="w-full rounded-2xl h-full object-cover" src={img} alt="" />
                                     </div>
@@ -118,7 +116,6 @@ const SearchResult = () => {
                 </div>
 
                 <div className="hidden lg:block">
-
                     <img className="w-full h-full" src={map} alt="" />
                 </div>
             </div>
