@@ -70,15 +70,14 @@ const services = [
 const SearchResult = () => {
     return (
         <div>
-            <div className="w-[90%] mx-auto p-2 grid grid-cols-2 gap-10">
+            <div className="w-[90%] mx-auto p-2 lg:grid grid-cols-2 gap-10">
                 <div>
                     <p className="text-neutral">252 stays Apr 13-17, 3 guests</p>
                     <h3 className="text-2xl font-bold">Stay in Dhaka Division</h3>
-                    <div className="filter-items flex gap-2 my-3">
+                    <div className="filter-items flex flex-wrap justify-between gap-3 my-3">
                         <button className="btn btn-outline btn-sm rounded-3xl">Cancelation flexibility</button>
                         <button className="btn btn-outline btn-sm rounded-3xl">Type of place</button>
                         <button className="btn btn-outline btn-sm rounded-3xl">Price</button>
-                        <button className="btn btn-outline btn-sm rounded-3xl">Instant Book</button>
                         <button className="btn btn-outline btn-sm rounded-3xl">Air Condition</button>
                     </div>
                     <div className="service-items">
@@ -86,7 +85,9 @@ const SearchResult = () => {
                             const { wifi, airCondition, kitchen, guests, bedroom, baths, beds, cancelationFlexibility, price, rating, reviews, img, title } = service;
                             return (
                                 <div className="service flex gap-8 my-8 border-b-2 pb-8 last:border-b-0">
-                                    <img className="w-5/12 rounded-2xl h-[180px] object-cover" src={img} alt="" />
+                                    <div className="w-5/12">
+                                        <img className="w-full rounded-2xl h-full object-cover" src={img} alt="" />
+                                    </div>
                                     <div className="w-7/12">
                                         <h2 className="text-xl font-bold">{title}</h2>
                                         <p className="my-3">{`${guests} guests ${bedroom} bedroom ${beds} beds ${baths} baths`}</p>
@@ -111,7 +112,7 @@ const SearchResult = () => {
                         })}
                     </div>
                 </div>
-                <div>
+                <div className="hidden lg:block">
                     <img className="w-full h-full" src={map} alt="" />
                 </div>
             </div>
