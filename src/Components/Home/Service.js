@@ -2,12 +2,12 @@ import React from "react";
 import "./style.css";
 
 const Service = ({ service, itemToShow }) => {
-    const { title, img, price, rating, address, placeType } = service;
+    const { title, img, price, address, placeType, reviews } = service;
 
     return (
         <div className="mr-4">
-            <figure className="">
-                <img className={`w-full ${itemToShow === 3 && "xl:h-[180px]"} xl:h-[130px] lg:h-[170px] md:h-[170px] h-[270px] object-cover`} src={img} alt="Shoes" />
+            <figure>
+                <img className={`w-full object-cover ${itemToShow === 4 ? "xl:h-[130px] lg:h-[150px] md:h-[150px] sm:h-[200px] h-[240px]" : "xl:h-[180px] lg:h-[150px] md:h-[150px] sm:h-[200px] h-[240px]"}`} src={img} alt="" />
             </figure>
             <div>
                 <h2 class="text-xs uppercase text-secondary font-bold my-1">
@@ -23,7 +23,7 @@ const Service = ({ service, itemToShow }) => {
                         <i class="fa-solid fa-star text-success text-xs"></i>
                         <i class="fa-solid fa-star text-success text-xs"></i>
                     </div>
-                    <span className="ml-2">{rating}</span>
+                    <span className="ml-2">{reviews}</span>
                 </div>
             </div>
         </div>
