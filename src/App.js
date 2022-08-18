@@ -1,7 +1,8 @@
 import { Route, Routes } from "react-router-dom";
 import Home from "./Components/Home/Home";
-import SafePeacefulDetail from "./Components/SafePeacefulDetail/SafePeacefulDetail";
+import SearchResult from "./Components/Pages/SearchResult";
 import Header from "./Components/Shared/Header";
+import NotFound from "./Components/Shared/NotFound";
 
 function App() {
     return (
@@ -9,9 +10,12 @@ function App() {
             <Header />
             <Routes>
                 <Route path="/" element={<Home />} />
+                <Route path="/search-result" element={<SearchResult />} />
+
+                <Route path="*" element={<NotFound />} />
             </Routes>
             {/* <Footer /> */}
-            <SafePeacefulDetail></SafePeacefulDetail>
+            
         </>
     );
 }

@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 import "react-day-picker/dist/style.css";
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 
 const FilterSidebar = () => {
     const [adult, setAdult] = useState(0);
@@ -16,11 +17,15 @@ const FilterSidebar = () => {
         formState: { errors },
     } = useForm();
 
-    const onSubmit = (data) => {};
+    const navigate = useNavigate();
+
+    const onSubmit = (data) => {
+        console.log(data);
+        navigate("/search-result");
+    };
 
     return (
-        <div>
-            <h2 className="font-bold text-xl mb-10">Where do you want to go</h2>
+        <aside>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div class="form-control mb-5 shadow-lg shadow-gray-100 py-4 px-5 rounded-xl border border-[#fbf9f9]">
                     <label>
@@ -29,14 +34,16 @@ const FilterSidebar = () => {
                     </label>
                 </div>
 
-                <div className="lg:flex gap-3 mb-5 ">
-                    <div class=" form-control shadow-lg shadow-gray-100 py-4 px-5 rounded-xl border border-[#fbf9f9] w-full">
+
+                <div className="xl:flex gap-3">
+                    <div class="mb-5 form-control shadow-lg shadow-gray-100 py-4 px-5 rounded-xl border border-[#fbf9f9] w-full">
                         <label>
                             <p className="uppercase font-bold">Arrival</p>
                             <input className="w-full focus:outline-none" type="date" name="arrival" id="arrival" />
                         </label>
                     </div>
-                    <div class=" form-control shadow-lg shadow-gray-100 py-4 px-5 rounded-xl border border-[#fbf9f9] w-full">
+
+                    <div class="mb-5 form-control shadow-lg shadow-gray-100 py-4 px-5 rounded-xl border border-[#fbf9f9] w-full">
                         <label>
                             <p className="uppercase font-bold">Departure</p>
                             <input className="w-full focus:outline-none" type="date" name="departure" id="departure" />
@@ -59,11 +66,11 @@ const FilterSidebar = () => {
                                 <span className="text-sm text-gray-300">Greater then 12</span>
                             </div>
                             <div>
-                                <button className="disabled:text-gray-300" disabled={adult < 1 && "disabled"} onClick={() => setAdult(adult - 1)}>
+                                <button type="button" className="disabled:text-gray-300" disabled={adult < 1 && "disabled"} onClick={() => setAdult(adult - 1)}>
                                     <FontAwesomeIcon icon={faMinus} />
                                 </button>
                                 <input value={adult} className="font-bold text-lg w-14 focus:outline-none text-center" type="text" />
-                                <button className="disabled:text-gray-300" disabled={adult >= 5 && "disabled"} onClick={() => setAdult(adult + 1)}>
+                                <button type="button" className="disabled:text-gray-300" disabled={adult >= 5 && "disabled"} onClick={() => setAdult(adult + 1)}>
                                     <FontAwesomeIcon icon={faPlus} />
                                 </button>
                             </div>
@@ -74,11 +81,11 @@ const FilterSidebar = () => {
                                 <span className="text-sm text-gray-300">Age 2-12</span>
                             </div>
                             <div>
-                                <button className="disabled:text-gray-300" disabled={child < 1 && "disabled"} onClick={() => setChild(child - 1)}>
+                                <button type="button" className="disabled:text-gray-300" disabled={child < 1 && "disabled"} onClick={() => setChild(child - 1)}>
                                     <FontAwesomeIcon icon={faMinus} />
                                 </button>
                                 <input value={child} className="font-bold text-lg w-14 focus:outline-none text-center" type="text" />
-                                <button className="disabled:text-gray-300" disabled={child >= 5 && "disabled"} onClick={() => setChild(child + 1)}>
+                                <button type="button" className="disabled:text-gray-300" disabled={child >= 5 && "disabled"} onClick={() => setChild(child + 1)}>
                                     <FontAwesomeIcon icon={faPlus} />
                                 </button>
                             </div>
@@ -89,11 +96,11 @@ const FilterSidebar = () => {
                                 <span className="text-sm text-gray-300">Younger then 2</span>
                             </div>
                             <div>
-                                <button className="disabled:text-gray-300" disabled={babies < 1 && "disabled"} onClick={() => setBabies(babies - 1)}>
+                                <button type="button" className="disabled:text-gray-300" disabled={babies < 1 && "disabled"} onClick={() => setBabies(babies - 1)}>
                                     <FontAwesomeIcon icon={faMinus} />
                                 </button>
                                 <input value={babies} className="font-bold text-lg w-14 focus:outline-none text-center" type="text" />
-                                <button className="disabled:text-gray-300" disabled={babies >= 5 && "disabled"} onClick={() => setBabies(babies + 1)}>
+                                <button type="button" className="disabled:text-gray-300" disabled={babies >= 5 && "disabled"} onClick={() => setBabies(babies + 1)}>
                                     <FontAwesomeIcon icon={faPlus} />
                                 </button>
                             </div>
@@ -104,7 +111,7 @@ const FilterSidebar = () => {
                     <FontAwesomeIcon className="mr-2" icon={faSearch} /> Search
                 </button>
             </form>
-        </div>
+        </aside>
     );
 };
 
