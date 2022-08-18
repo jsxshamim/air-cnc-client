@@ -9,6 +9,7 @@ const Service = ({ service, itemToShow }) => {
             <div>
                 <img className={`w-full object-cover ${itemToShow === 4 ? "xl:h-[130px] lg:h-[150px] md:h-[150px] sm:h-[200px] h-[240px]" : "xl:h-[180px] lg:h-[150px] md:h-[150px] sm:h-[200px] h-[240px]"}`} src={img} alt="" />
             </div>
+
             <div>
                 <h2 class="text-xs uppercase text-secondary font-bold my-1">
                     {placeType} - {address}
