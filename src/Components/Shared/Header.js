@@ -2,33 +2,6 @@ import React from "react";
 import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
-    const menuItems = (
-        <>
-            <li>
-                <NavLink className="font-bold text-sm hover:bg-transparent hover:text-primary" to="/">
-                    Home
-                </NavLink>
-            </li>
-            <li>
-                <NavLink className="font-bold text-sm hover:bg-transparent hover:text-primary" to="/home">
-                    Host your home
-                </NavLink>
-            </li>
-            <li>
-                <NavLink className="font-bold text-sm hover:bg-transparent hover:text-primary" to="/experience">
-                    Host your experience
-                </NavLink>
-            </li>
-            <li>
-                <NavLink className="font-bold text-sm hover:bg-transparent hover:text-primary" to="/help">
-                    Help
-                </NavLink>
-            </li>
-        </>
-    );
-    const activeStyle = { color: "green", textDecoration: "underline" };
-    const activeClass = "activated";
-
     const navItems = [
         {
             id: 1,
@@ -61,7 +34,7 @@ const Header = () => {
     };
 
     return (
-        <div className="border-b mb-5">
+        <div className="border-b mb-10 py-2">
             <div className="container mx-auto">
                 <div class="navbar ">
                     <div class="navbar-start">
