@@ -14,6 +14,7 @@ const Home = () => {
 
                     <div className="col-span-8">
                         <ServicesCard />
+
                     </div>
                 </div>
             </div>

@@ -34,6 +34,7 @@ const FilterSidebar = () => {
                     </label>
                 </div>
 
+
                 <div className="xl:flex gap-3">
                     <div class="mb-5 form-control shadow-lg shadow-gray-100 py-4 px-5 rounded-xl border border-[#fbf9f9] w-full">
                         <label>
@@ -41,6 +42,7 @@ const FilterSidebar = () => {
                             <input className="w-full focus:outline-none" type="date" name="arrival" id="arrival" />
                         </label>
                     </div>
+
                     <div class="mb-5 form-control shadow-lg shadow-gray-100 py-4 px-5 rounded-xl border border-[#fbf9f9] w-full">
                         <label>
                             <p className="uppercase font-bold">Departure</p>
